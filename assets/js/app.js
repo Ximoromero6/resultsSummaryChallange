@@ -1,7 +1,9 @@
 (function () {
   const container = document.querySelector(".summary_list");
 
-  fetch("../../data.json")
+  fetch(
+    "https://github.com/Ximoromero6/resultsSummaryChallange/blob/main/data.json"
+  )
     .then((response) => response.json())
     .then((data) => {
       data.forEach((item) => {
