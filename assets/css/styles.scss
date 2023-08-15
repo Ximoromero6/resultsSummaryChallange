@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// * Primary * //
+$right_red: hsl(0, 100%, 67%);
+$orangey_yellow: hsl(39, 100%, 56%);
+$green_teal: hsl(166, 100%, 37%);
+$cobalt_blue: hsl(234, 85%, 45%);
+
+// * Gradients * //
+$light_slate_blue: hsl(252, 100%, 67%);
+$light_royal_blue: hsl(241, 81%, 54%);
+
+//* Circle *//
+$violet_blue: hsla(256, 72%, 46%, 1);
+$persian_blue: hsla(241, 72%, 46%, 0);
+
+// * Neutral * //
+$white: hsl(0, 0%, 100%);
+$pale_blue: hsl(221, 100%, 96%);
+$light_lavender: hsl(241, 100%, 89%);
+$dark_gray_blue: hsl(224, 30%, 27%);
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: $white;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  .results_container {
+    flex: 1;
+    background-color: $cobalt_blue;
+    background: linear-gradient(to top, $light_royal_blue, $light_slate_blue);
+    border-radius: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .result_text {
+      color: $light_lavender;
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .circle {
+      width: 180px;
+      height: 180px;
+      background-color: $cobalt_blue;
+      background: linear-gradient(to bottom, $violet_blue, $persian_blue);
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      h2 {
+        font-size: 60px;
+        color: $white;
+      }
+      p {
+        color: $light_lavender;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+    .title {
+      font-size: 26px;
+      color: $white;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .description {
+      color: $light_lavender;
+      max-width: 85%;
+      text-align: center;
+    }
+  }
+  .summary_container {
+    flex: 1;
+    padding: 50px;
+    background-color: $white;
+    border-radius: 0 30px 30px 0;
+    .result_text {
+      color: $dark_gray_blue;
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .summary_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .summary_item {
+        background-color: red;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        .title__summary {
+          font-weight: bold;
+        }
+        &:nth-child(1) {
+          background-color: lighten($right_red, 30);
+          p {
+            color: $right_red;
+          }
+        }
+        &:nth-child(2) {
+          background-color: lighten($orangey_yellow, 40);
+          p {
+            color: $orangey_yellow;
+          }
+        }
+        &:nth-child(3) {
+          background-color: lighten($green_teal, 55);
+          p {
+            color: $green_teal;
+          }
+        }
+        &:nth-child(4) {
+          background-color: lighten($cobalt_blue, 50);
+          p {
+            color: $cobalt_blue;
+          }
+        }
+        .icon__summary {
+          margin-right: 10px;
+        }
+        .puntuation_summary {
+          margin-left: auto;
+          p {
+            small {
+              color: #999;
+              font-weight: bold;
+              &:first-child {
+                color: $dark_gray_blue;
+              }
+            }
+          }
+        }
+      }
+    }
+    .continue_button {
+      width: 100%;
+      font-family: inherit;
+      background-color: $dark_gray_blue;
+      padding: 15px;
+      margin-top: 20px;
+      color: $white;
+      border-radius: 30px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background: linear-gradient(
+          to top,
+          $light_royal_blue,
+          $light_slate_blue
+        );
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+    .results_container {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}

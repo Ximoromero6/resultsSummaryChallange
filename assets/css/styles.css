@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.container .results_container {
+  flex: 1;
+  background-color: hsl(234, 85%, 45%);
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  border-radius: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .results_container .result_text {
+  color: hsl(241, 100%, 89%);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.container .results_container .circle {
+  width: 180px;
+  height: 180px;
+  background-color: hsl(234, 85%, 45%);
+  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.container .results_container .circle h2 {
+  font-size: 60px;
+  color: hsl(0, 0%, 100%);
+}
+.container .results_container .circle p {
+  color: hsl(241, 100%, 89%);
+  font-size: 15px;
+  font-weight: bold;
+}
+.container .results_container .title {
+  font-size: 26px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.container .results_container .description {
+  color: hsl(241, 100%, 89%);
+  max-width: 85%;
+  text-align: center;
+}
+.container .summary_container {
+  flex: 1;
+  padding: 50px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0 30px 30px 0;
+}
+.container .summary_container .result_text {
+  color: hsl(224, 30%, 27%);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.container .summary_container .summary_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .summary_container .summary_list .summary_item {
+  background-color: red;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+.container .summary_container .summary_list .summary_item .title__summary {
+  font-weight: bold;
+}
+.container .summary_container .summary_list .summary_item:nth-child(1) {
+  background-color: #fff0f0;
+}
+.container .summary_container .summary_list .summary_item:nth-child(1) p {
+  color: hsl(0, 100%, 67%);
+}
+.container .summary_container .summary_list .summary_item:nth-child(2) {
+  background-color: #fff8eb;
+}
+.container .summary_container .summary_list .summary_item:nth-child(2) p {
+  color: hsl(39, 100%, 56%);
+}
+.container .summary_container .summary_list .summary_item:nth-child(3) {
+  background-color: #d6fff5;
+}
+.container .summary_container .summary_list .summary_item:nth-child(3) p {
+  color: hsl(166, 100%, 37%);
+}
+.container .summary_container .summary_list .summary_item:nth-child(4) {
+  background-color: #e7eafd;
+}
+.container .summary_container .summary_list .summary_item:nth-child(4) p {
+  color: hsl(234, 85%, 45%);
+}
+.container .summary_container .summary_list .summary_item .icon__summary {
+  margin-right: 10px;
+}
+.container .summary_container .summary_list .summary_item .puntuation_summary {
+  margin-left: auto;
+}
+.container .summary_container .summary_list .summary_item .puntuation_summary p small {
+  color: #999;
+  font-weight: bold;
+}
+.container .summary_container .summary_list .summary_item .puntuation_summary p small:first-child {
+  color: hsl(224, 30%, 27%);
+}
+.container .summary_container .continue_button {
+  width: 100%;
+  font-family: inherit;
+  background-color: hsl(224, 30%, 27%);
+  padding: 15px;
+  margin-top: 20px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.container .summary_container .continue_button:hover {
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .container .results_container {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
