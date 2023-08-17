@@ -73,7 +73,7 @@ body {
 }
 .container .summary_container {
   flex: 1;
-  padding: 50px;
+  padding: 40px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 0 30px 30px 0;
 }
